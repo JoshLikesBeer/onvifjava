@@ -1,6 +1,13 @@
 # onvifjava
 ONVIF java library
 
+What my fork does
+=============
+Added toString() methods for easier debugging / code exploration.
+In SoapClient, added workaround for SAAJ0415: InputStream does not represent a valid SOAP 1.2 Message issue I was seeing.
+
+Original version
+=============
 This project is deeply reworked viersion of https://github.com/milg0/onvif-java-lib.<br>
 
 
