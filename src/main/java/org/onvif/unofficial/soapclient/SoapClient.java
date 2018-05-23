@@ -52,6 +52,16 @@ public class SoapClient implements ISoapClient {
 			soapConnection = soapConnectionFactory.createConnection();
 			SOAPMessage soapMessage = processSoapMessage(request, needsAuthentification);
 			SOAPMessage soapResponse = soapConnection.call(soapMessage, soapUri);
+			
+			// Workaround for SEVERE: SAAJ0415: InputStream does not represent a valid SOAP 1.2 Message
+			// Calling this once and catching the error makes it possible to read the response.
+			// I don't know why this works. There's probably a better way to do this.
+			try {
+				soapResponse.getSOAPBody();
+			} catch (SOAPException ex) {
+				// Next call to soapResponse.getSOAPBody() will succeed.
+			}
+			
 			// get new each time? - no
 			Unmarshaller unmarshaller = getUnmarshaller(responseClass);
 			return (T) unmarshaller.unmarshal(soapResponse.getSOAPBody().extractContentAsDocument());
