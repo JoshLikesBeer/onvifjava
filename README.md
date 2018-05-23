@@ -3,8 +3,8 @@ ONVIF java library
 
 What my fork does
 =============
-Added toString() methods for easier debugging / code exploration.
-In SoapClient, added workaround for SAAJ0415: InputStream does not represent a valid SOAP 1.2 Message issue I was seeing.
+* Added toString() methods for easier debugging / code exploration.
+* In SoapClient, added workaround for SAAJ0415: InputStream does not represent a valid SOAP 1.2 Message issue I was seeing.
 
 Original version
 =============
