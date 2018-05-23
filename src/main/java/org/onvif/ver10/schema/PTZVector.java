@@ -85,4 +85,9 @@ public class PTZVector {
 		this.zoom = value;
 	}
 
+	@Override
+	public String toString() {
+		return "PTZVector [panTilt=" + panTilt + ", zoom=" + zoom + "]";
+	}
+
 }

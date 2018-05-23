@@ -342,4 +342,9 @@ public class Profile {
 		return otherAttributes;
 	}
 
+	@Override
+	public String toString() {
+		return "Profile [name=" + name + ", token=" + token + "]";
+	}
+
 }

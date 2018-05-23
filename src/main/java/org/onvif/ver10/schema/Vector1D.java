@@ -80,4 +80,9 @@ public class Vector1D {
 		this.space = value;
 	}
 
+	@Override
+	public String toString() {
+		return String.valueOf(x);
+	}
+
 }

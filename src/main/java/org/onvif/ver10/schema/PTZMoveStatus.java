@@ -85,4 +85,9 @@ public class PTZMoveStatus {
 		this.zoom = value;
 	}
 
+	@Override
+	public String toString() {
+		return "PTZMoveStatus [panTilt=" + panTilt + ", zoom=" + zoom + "]";
+	}
+
 }

@@ -153,4 +153,9 @@ public class VideoSource extends DeviceEntity {
 		return otherAttributes;
 	}
 
+	@Override
+	public String toString() {
+		return "VideoSource [token=" + token + ", framerate=" + framerate + ", resolution=" + resolution + "]";
+	}
+
 }

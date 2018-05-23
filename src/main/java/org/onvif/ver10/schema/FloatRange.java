@@ -77,4 +77,9 @@ public class FloatRange {
 		this.max = value;
 	}
 
+	@Override
+	public String toString() {
+		return "FloatRange [" + min + ".." + max + "]";
+	}
+
 }

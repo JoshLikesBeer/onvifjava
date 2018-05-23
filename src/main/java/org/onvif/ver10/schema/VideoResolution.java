@@ -75,4 +75,9 @@ public class VideoResolution {
 		this.height = value;
 	}
 
+	@Override
+	public String toString() {
+		return "VideoResolution [width=" + width + ", height=" + height + "]";
+	}
+
 }

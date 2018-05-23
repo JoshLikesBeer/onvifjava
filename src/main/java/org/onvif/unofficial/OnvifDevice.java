@@ -286,4 +286,9 @@ public class OnvifDevice {
 	public String reboot() throws Exception {
 		return devMngtService.reboot();
 	}
+
+	@Override
+	public String toString() {
+		return "OnvifDevice [domain=" + domain + ", returnedDomain=" + returnedDomain + "]";
+	}
 }

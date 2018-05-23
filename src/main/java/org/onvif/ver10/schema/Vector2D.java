@@ -99,4 +99,9 @@ public class Vector2D {
 		this.space = value;
 	}
 
+	@Override
+	public String toString() {
+		return "(" + x + ", " + y + ")";
+	}
+
 }

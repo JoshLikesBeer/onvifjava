@@ -106,7 +106,7 @@ public class DeviceManagementService extends AbstractService {
 
 	public Capabilities getCapabilities() throws Exception {
 		GetCapabilitiesResponse response = client.processRequest(new GetCapabilities(), GetCapabilitiesResponse.class,
-				serviceUrl, false);
+				serviceUrl, true);
 		return response.getCapabilities();
 	}
 

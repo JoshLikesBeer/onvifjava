@@ -194,4 +194,10 @@ public class PTZStatus {
 		return otherAttributes;
 	}
 
+	@Override
+	public String toString() {
+		return "PTZStatus [position=" + position + ", moveStatus=" + moveStatus + ", error=" + error + ", utcTime=" + utcTime
+				+ ", any=" + any + ", otherAttributes=" + otherAttributes + "]";
+	}
+
 }
