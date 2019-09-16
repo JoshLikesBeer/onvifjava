@@ -11,6 +11,7 @@ import java.util.Properties;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.onvif.unofficial.OnvifDevice;
 import org.onvif.ver10.schema.NetworkInterface;
@@ -21,6 +22,7 @@ import org.onvif.ver10.schema.VideoResolution;
 import org.onvif.ver10.schema.VideoSource;
 import org.onvif.ver10.schema.VideoSourceConfiguration;
 
+@Ignore
 public class TestHelper {
 
 	private OnvifDevice device;

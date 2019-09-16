@@ -1,5 +1,7 @@
 # Compiled class file
 *.class
+build/
+.gradle/
 
 #eclipse
 .classpath
@@ -11,9 +13,6 @@
 
 # BlueJ files
 *.ctxt
-
-#configuration
-*.properties
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/

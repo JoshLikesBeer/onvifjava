@@ -1,0 +1,56 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: "maven-publish"
+//apply plugin: "io.spring.dependency-management"
+
+tasks.withType(JavaCompile) {
+  options.encoding = "UTF-8"
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+    maven {
+        url "https://jitpack.io"
+    }
+}
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+}
+
+dependencies {
+	if (JavaVersion.current() != JavaVersion.VERSION_1_8) {
+		implementation "javax.xml.bind:jaxb-api:2.3.1"
+		implementation "javax.xml.bind:jaxb-api-parent:2.3.1"
+		implementation "javax.xml.ws:jaxws-api:2.3.1"
+		implementation "com.sun.xml.ws:jaxws-ri:2.3.2"
+	}
+    compile "commons-codec:commons-codec:${commonsCodecVersion}"
+    compile "org.slf4j:slf4j-api:${slf4jVersion}"
+    compile "ch.qos.logback:logback-classic:${logbackVersion}"
+    testCompile "junit:junit:${junitVersion}"
+}
+
+group 'org.onvif.unofficial'
+version MAVEN_VERSION
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+        }
+    }
+}
+defaultTasks "clean", "build", "publishToMavenLocal"
